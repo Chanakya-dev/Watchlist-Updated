@@ -7,6 +7,9 @@ import Navbar from './components/NavBar';
 import { store } from './redux/Store';
 import Home from './pages/Home';
 import Search from './pages/Search';
+import Watchlist from './pages/Watchlist';
+//import {  Route, Routes  } from 'react-router-dom';
+import './App.css';
 
 function App() {
   return (
@@ -19,6 +22,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/search" element={<Search />} />
+              <Route path ="/watchlist" element={<Watchlist />} />
             </Routes>
           </Box>
         </Router>

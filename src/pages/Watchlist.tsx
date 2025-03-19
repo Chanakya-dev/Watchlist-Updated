@@ -7,7 +7,7 @@ import MovieCard from '../components/MovieCard';
 
 const Watchlist: React.FC = () => { 
 const dispatch = useDispatch(); 
-const watchlist = useSelector((state: RootState) => state.movies.watchlist); 
+const watchlist = useSelector((state: RootState) => state.movie.watchlist); 
 
 const handleRemoveFromWatchlist = (movieId: number) => { 
   const movieToRemove = watchlist.find((movie) => movie.id === movieId); 
@@ -35,7 +35,7 @@ return (
               color="secondary" 
               onClick={() => handleRemoveFromWatchlist(movie.id)} 
               sx={{ mt: 2 }} 
-            > //[pause]
+            > 
               Remove from Watchlist 
             </Button> 
           </Grid>

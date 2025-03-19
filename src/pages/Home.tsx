@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchPopularMovies, fetchTrendingMovies } from '../redux/MovieSlice'; 
 import { RootState, AppDispatch } from '../redux/Store'; 
 import MovieCard from '../components/MovieCard'; 
+import { getPopularMovies, getTrendingMovies } from '../utils/api';
 
 
 const Home: React.FC = () => { 
