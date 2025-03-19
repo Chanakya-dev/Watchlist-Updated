@@ -8,7 +8,7 @@ import MovieCard from '../components/MovieCard';
 const Home: React.FC = () => { 
   const dispatch = useDispatch<AppDispatch>(); 
   const { popularMovies, trendingMovies, loading, error } = useSelector( 
-    (state: RootState) => state.movies
+    (state: RootState) => state.movie
   ); 
 
   useEffect(() => { 

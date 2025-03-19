@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Box, InputBase, IconButton } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
-import BookmarkIcon from '@mui/icons-material/Bookmark'; // Import Icon for Watchlist
+import BookmarkIcon from '@mui/icons-material/Bookmark'; 
 
-// Styled components for the search bar
+
 const Search = styled('div')(({ theme }) => ({
 position: 'relative',
 borderRadius: theme.shape.borderRadius,
@@ -47,7 +48,7 @@ const handleSearch = (e: React.FormEvent) => {
   e.preventDefault();
   if (searchQuery.trim()) {
     navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
-    setSearchQuery(''); // Clear the search input after submitting
+    setSearchQuery(''); 
   }
 };
 
@@ -73,7 +74,7 @@ return (
           onClick={() => navigate('/watchlist')}
           sx={{
             ml: 2,
-            color: 'white', // Ensure the icon is white to be visible
+            color: 'white', 
           }}
           aria-label="Watchlist"
         >
