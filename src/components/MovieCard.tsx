@@ -4,7 +4,7 @@ import { Bookmark, BookmarkBorder } from '@mui/icons-material';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToWatchlist, removeFromWatchlist } from '../redux/MovieSlice';
 
-// Define the Movie type based on the data structure expected
+
 interface Movie {
 id: number;
 title: string;
@@ -19,13 +19,13 @@ movie: Movie;
 const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
 const dispatch = useDispatch();
 
-// Access watchlist state from Redux store
+
 const watchlist = useSelector((state: any) => state.movies.watchlist);
 const isInWatchlist = watchlist.some((m: Movie) => m.id === movie.id);
 
-// Handle click for adding/removing movie from watchlist
+
 const handleWatchlistClick = (e: React.MouseEvent) => {
-  e.stopPropagation(); // Prevent the click from triggering the card's onClick
+  e.stopPropagation(); 
   if (isInWatchlist) {
     dispatch(removeFromWatchlist(movie));
   } else {
@@ -47,7 +47,7 @@ return (
       '&:hover': {
         transform: 'scale(1.05)',
       },
-      position: 'relative', // To position the icon button inside the card
+      position: 'relative', 
     }}
   >
     <CardMedia
@@ -93,7 +93,7 @@ return (
         position: 'absolute',
         top: 8,
         right: 8,
-        color: isInWatchlist ? 'primary.main' : 'text.secondary', // Change color based on watchlist status
+        color: isInWatchlist ? 'primary.main' : 'text.secondary', 
       }}
     >
       {isInWatchlist ? <Bookmark /> : <BookmarkBorder />}
