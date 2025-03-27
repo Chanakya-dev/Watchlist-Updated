@@ -54,7 +54,7 @@ export const fetchTrendingMovies = createAsyncThunk<Movie[]>(
 
 
 const movieSlice = createSlice({
-  name: 'movies',
+  name: 'movie',
   initialState,
   reducers: { 
   addToWatchlist: (state, action: PayloadAction<Movie>) => { 
