@@ -20,7 +20,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
 const dispatch = useDispatch();
 
 
-const watchlist = useSelector((state: any) => state.movies.watchlist);
+const watchlist = useSelector((state: any) => state.movie.watchlist);
 const isInWatchlist = watchlist.some((m: Movie) => m.id === movie.id);
 
 
